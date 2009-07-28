@@ -128,12 +128,12 @@ var myExtension = {
     alert('Não foi possível limpar o cache do path: ' + myExtension.urlParaLimpar + '\nO serviço de limpeza pode estar indisponível.\nUrl do serviço: ' + myExtension.urlAmbiente + myExtension.urlLimpaCache);
   },
   
-  exibirRoda(): function() {
+  exibirRoda: function() {
     myExtension.exibeRodaCount++;
     $jq('#my-panel image').get(0).src = 'chrome://ffvigcache/content/loading-green.gif';  
   },
   
-  esconderRoda(): function() {
+  esconderRoda: function() {
     myExtension.exibeRodaCount--;
     if (myExtension.exibeRodaCount == 0)
         $jq('#my-panel image').get(0).src = 'chrome://ffvigcache/content/vignette-white-small.gif';
